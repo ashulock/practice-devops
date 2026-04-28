@@ -2,6 +2,15 @@
   "name": "task-app-server",
   "version": "1.0.0",
   "description": "Simple task app backend for DevOps demo",
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "devops"
+  ],
+  "license": "MIT",
+  "author": "Your Name",
+  "type": "commonjs",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -11,14 +20,6 @@
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write ."
   },
-  "keywords": [
-    "nodejs",
-    "express",
-    "mongodb",
-    "devops"
-  ],
-  "author": "Your Name",
-  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
@@ -26,9 +27,9 @@
     "mongoose": "^7.5.0"
   },
   "devDependencies": {
-    "eslint": "^9.34.0",
+    "eslint": "^9.39.4",
     "nodemon": "^3.0.1",
-    "prettier": "^3.6.2"
+    "prettier": "^3.8.3"
   },
   "engines": {
     "node": ">=16.0.0"
