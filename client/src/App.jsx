@@ -24,7 +24,7 @@ function App() {
       const response = await taskService.getAllTasks();
       setTasks(response.data);
     } catch (err) {
-      setError('Failed to fetch tasks. Please try again.');
+      setError(err.message || 'Failed to fetch tasks. Please try again.');
       console.error('Error fetching tasks:', err);
     } finally {
       setLoading(false);

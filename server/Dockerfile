@@ -6,7 +6,9 @@ COPY package*.json ./
 
 RUN npm install
 
-COPY  . .
+COPY . .
+
+ENV NODE_ENV=production
 
 EXPOSE 5000
 

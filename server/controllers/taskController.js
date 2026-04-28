@@ -63,6 +63,7 @@ const createTask = async (req, res) => {
 const deleteTask = async (req, res) => {
   try {
     const { id } = req.params;
+    console.log(`Deleting task with ID: ${id}`);
 
     const task = await Task.findByIdAndDelete(id);
 
