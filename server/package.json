@@ -10,7 +10,7 @@
   ],
   "license": "MIT",
   "author": "Your Name",
-  "type": "commonjs",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
