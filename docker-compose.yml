@@ -6,7 +6,7 @@ services:
     env_file:
       - ./server/.env
     ports:
-      - "5002:5000"
+      - "5000:5000"
 
   frontend:
   build:
@@ -16,6 +16,6 @@ services:
   container_name: frontend
   restart: always
   ports:
-    - "5175:5173"
+    - "5173:5173"
   depends_on:
     - backend
