@@ -6,16 +6,16 @@ services:
     env_file:
       - ./server/.env
     ports:
-      - "5001:5000"
+      - "5002:5000"
 
   frontend:
   build:
     context: ./client
     args:
-      VITE_API_URL: http://13.206.203.42:5001/api
+      VITE_API_URL: http://13.206.203.42:5002/api
   container_name: frontend
   restart: always
   ports:
-    - "5174:5173"
+    - "5175:5173"
   depends_on:
     - backend
