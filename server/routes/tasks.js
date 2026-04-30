@@ -12,4 +12,4 @@ router.post('/', createTask);
 // DELETE /api/tasks/:id - Delete a task
 router.delete('/:id', deleteTask);
 
-module.exports = router;
+export default router;
