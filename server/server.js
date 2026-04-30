@@ -42,7 +42,7 @@ app.get("/health", (req, res) => {
 });
 
 // Error handler
-app.use((err, req, res, next) => {
+app.use((err, req, res) => {
   console.error(err.stack);
   res.status(500).json({ message: "Something went wrong!" });
 });
