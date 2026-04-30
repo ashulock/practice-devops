@@ -1,4 +1,4 @@
-export default [
+module.exports = [
   {
     files: ['**/*.js'], // only check .js files in server directory
     rules: {

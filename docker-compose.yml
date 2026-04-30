@@ -1,20 +1,21 @@
 services:
-  server:
+  backend:
     build: ./server
-    ports:
-      - "5001:5000"
-    environment:
-      - PORT=5000
-      - MONGO_URI=mongodb+srv://ashutosh:ninja@cluster0.9bpa22r.mongodb.net/taskdb?retryWrites=true&w=majority
+    container_name: backend
     restart: always
+    env_file:
+      - ./server/.env
+    ports:
+      - "5000:5000"
 
-  client:
-    build:
-      context: ./client
-      args:
-        - VITE_API_URL=http://localhost:5001/api
-    ports:
-      - "5174:5173"
-    depends_on:
-      - server
-    restart: always
+  frontend:
+  build:
+    context: ./client
+    args:
+      VITE_API_URL: http://13.233.127.69:5000/api
+  container_name: frontend
+  restart: always
+  ports:
+    - "5173:5173"
+  depends_on:
+    - backend
